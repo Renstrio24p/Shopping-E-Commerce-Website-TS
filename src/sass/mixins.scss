@@ -1,0 +1,58 @@
+@mixin iPAD {
+
+    .navbar {
+        padding: 10px 30px;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 300px;
+        background-color: #e3e6f3;
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+        position: fixed;
+        padding: 80px 0 0 30px;
+        align-items: flex-start;
+        right: -300px;
+        transition: .6s ease-in-out;
+    }
+
+    .navbar ul.show {
+        right: 0
+    }
+
+    .mobile, li.menu {
+        display: block;
+        top: 0;
+    }
+
+    li.menu {
+        position: absolute;
+        top: 25px;
+    }
+
+    .mobile svg {
+        padding-left: 20px;
+        cursor: pointer;
+    }
+
+    .navbar li.cart {
+        display: none;
+    }
+
+    .hero {
+        height: 70vh;
+        padding: 0 80px;
+        background-position: top 30% right 30%;
+    }
+
+    .feature {
+        justify-content: center;
+    }
+
+    .feature .fe-box {
+        margin: 15px 15px;
+    }
+}

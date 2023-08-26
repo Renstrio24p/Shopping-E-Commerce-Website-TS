@@ -4,7 +4,7 @@ import UniqueHash from "../security/hashes";
 import Footer from "../ts/Footer";
 import Navbar from "../ts/Navbar";
 
-export default function Render(start: HTMLElement) {
+export default function Render(start: HTMLDivElement) {
   // Get Render's ID
  
   const Nav = start.querySelector('#navbar') as HTMLDivElement | null;

@@ -1,16 +1,19 @@
 import styles from '../../sass/modules/app.module.scss';
 import Footer from '../../ts/Footer';
+import { ScrollEffect } from '../../ts/functions/ScrollEffect';
 import { Banner3API, BannerSMAPI, FeatureAPI, NewArrivalAPI, ProductAPI } from './components/api';
 
 export default function HomePage(DOM: HTMLDivElement){
 
     DOM.innerHTML = (`
          <section class='${styles.hero}'>
+         <div class='${styles.herodiv}'>
             <h4>Trade-in-offer</h4>
             <h2>Super value deals</h2>
             <h1>On all products</h1>
             <p>Save more with coupons & up to 70% off!</p>
             <button>Shop Now</button>
+         </div>
          </section>
          
          <section id='features' class='${styles.feature} ${styles['section-p1']}'>
@@ -60,6 +63,9 @@ export default function HomePage(DOM: HTMLDivElement){
     const Foot = document.getElementById('footer') as HTMLDivElement | null;
     {Foot && Footer(Foot)}
 
+    // Function
+
+    ScrollEffect(DOM);
 
     // API's
     FeatureAPI(DOM);
