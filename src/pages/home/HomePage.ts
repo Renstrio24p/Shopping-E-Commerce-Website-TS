@@ -19,7 +19,7 @@ export default function HomePage(DOM: HTMLDivElement){
          <section id='features' class='${styles.feature} ${styles['section-p1']}'>
          </section>
 
-         <section id='product1' class='${styles['section-p1']}'>
+         <section id='product1' class='${styles['section-p1']} ${styles.product1}'>
                 <h2>Featured Products</h2>
                 <p>Summer Collection New Morden Design</p>
                 <div id='pro' class='${styles['pro-container']}'>
@@ -32,7 +32,7 @@ export default function HomePage(DOM: HTMLDivElement){
             <button class='${styles.normal}'>Explore More</button>
          </section>
 
-         <section id='product2' class='${styles['section-p1']}'>
+         <section id='product2' class='${styles['section-p1']} ${styles.product2}'>
                 <h2>New Arrivals</h2>
                 <p>Summer Collection New Morden Design</p>
                 <div id='pro2' class='${styles['pro-container']}'>

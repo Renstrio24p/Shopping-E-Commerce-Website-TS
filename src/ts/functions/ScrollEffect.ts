@@ -1,7 +1,6 @@
 import styles from '../../sass/modules/app.module.scss';
 
 export const ScrollEffect = (DOM: HTMLDivElement) => {
-    document.addEventListener('DOMContentLoaded', () => {
         const HeroDiv = DOM.querySelector(`.${styles.herodiv}`) as HTMLDivElement | null;
 
         if (HeroDiv) {
@@ -27,5 +26,4 @@ export const ScrollEffect = (DOM: HTMLDivElement) => {
             };
             window.addEventListener('scroll', handleScroll);
         }
-    });
 };

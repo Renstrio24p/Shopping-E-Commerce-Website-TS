@@ -1,58 +1,212 @@
 @mixin iPAD {
-
-    .navbar {
-        padding: 10px 30px;
-    }
-
-    .navbar ul {
-        flex-direction: column;
-        top: 0;
-        right: 0;
-        height: 100vh;
-        width: 300px;
-        background-color: #e3e6f3;
-        box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-        position: fixed;
-        padding: 80px 0 0 30px;
-        align-items: flex-start;
-        right: -300px;
-        transition: .6s ease-in-out;
-    }
-
-    .navbar ul.show {
-        right: 0
-    }
-
-    .mobile, li.menu {
-        display: block;
-        top: 0;
-    }
-
-    li.menu {
-        position: absolute;
-        top: 25px;
-    }
-
-    .mobile svg {
-        padding-left: 20px;
-        cursor: pointer;
-    }
-
-    .navbar li.cart {
-        display: none;
-    }
-
-    .hero {
-        height: 70vh;
-        padding: 0 80px;
-        background-position: top 30% right 30%;
-    }
-
-    .feature {
-        justify-content: center;
-    }
-
-    .feature .fe-box {
-        margin: 15px 15px;
-    }
+  .section-p1 {
+    padding: 40px 80px;
+  }
+  .navbar {
+    padding: 10px 30px;
+  }
+  .navbar ul {
+    flex-direction: column;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 300px;
+    background-color: #e3e6f3;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 19px 38px, rgba(0, 0, 0, 0.22) 0 15px 12px;
+    position: fixed;
+    padding: 80px 0 0 30px;
+    align-items: flex-start;
+    right: -300px;
+    transition: 0.6s ease-in-out;
+  }
+  .navbar ul.show {
+    right: 0;
+  }
+  .mobile,
+  li.menu {
+    display: block;
+    top: 0;
+  }
+  .li.menu {
+    position: absolute;
+    top: 25px;
+  }
+  .mobile svg {
+    padding-left: 20px;
+    cursor: pointer;
+  }
+  .navbar li.cart {
+    display: none;
+  }
+  .hero {
+    height: 70vh;
+    padding: 0 20px;
+    background-position: top 30% right 30%;
+  }
+  .hero .herodiv h1 {
+    font-size: 30px;
+    margin: 0;
+  }
+  .hero .herodiv h2 {
+    font-size: 35px;
+  }
+  .hero .herodiv h4 {
+    padding-bottom: 0;
+  }
+  .hero .herodiv p {
+    font-size: 14px;
+  }
+  .feature {
+    justify-content: center;
+  }
+  .feature .fe-box {
+    margin: 15px 15px;
+  }
+  .feature {
+    width: 100%;
+    padding: 10px 5px;
+  }
+  .product1,
+  .product2 {
+    text-align: center;
+  }
+  .product1 .pro-container {
+    justify-content: center;
+  }
+  .product1 .pro {
+    margin: 15px;
+  }
+  .banner {
+    height: 25vh;
+  }
+  .banner h4 {
+    padding: 0;
+  }
+  .banner h2 {
+    font-size: 20px;
+    padding: 0;
+  }
+  .banner button {
+    padding: 10px;
+    font-size: 14px;
+  }
+  .pro2 .pro-container {
+    display: flex;
+    justify-content: center;
+  }
+  .sm-banner .banner-box {
+    min-width: 100%;
+    height: 30vh;
+    padding: 30px;
+  }
+  .banner3 {
+    padding: 0 10px;
+    gap: 10px;
+  }
+  .banner3 .banner-box {
+    width: 100%;
+  }
+  .banner3 .banner-box h2 {
+    font-size: 15px;
+    font-weight: 600;
+  }
+  .banner3 .banner-box h3 {
+    font-size: 13px;
+    font-weight: 500;
+  }
+  .news-letter form {
+    width: 100%;
+  }
+  .news-letter {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .section-p1 .pro-container {
+    justify-content: center;
+    gap: 30px;
+  }
+}
+@mixin SamsungGalaxy {
+  .feature {
+    width: 100%;
+    padding: 0 5px;
+  }
+  .hero .herodiv h1 {
+    font-size: 15px;
+  }
+  .hero .herodiv h2 {
+    font-size: 20px;
+    line-height: 20px;
+  }
+  .hero .herodiv h4 {
+    font-size: 14px;
+  }
+  .hero .herodiv p {
+    font-size: 10px;
+  }
+  .banner h4 {
+    font-size: 13px;
+  }
+  .banner h2 {
+    font-size: 15px;
+  }
+  .news-letter p {
+    font-size: 10px;
+  }
+  .banner button {
+    font-size: 10px;
+  }
+  .banner3 .banner-box h2 {
+    font-size: 10px;
+    padding-bottom: 10px;
+  }
+  .banner3 .banner-box h3 {
+    font-size: 10px;
+  }
+  .footer .content .col {
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
+  }
+  .footer Copyright p {
+    font-size: 14px;
+  }
+}
+@mixin SmallMobile {
+  .product1 {
+    padding: 0 20px;
+    text-align: center;
+  }
+  .product2 {
+    padding: 0 20px;
+    text-align: center;
+  }
+  .news-letter {
+    padding: 20px 20px;
+  }
+  .sm-banner .banner-box {
+    height: fit-content;
+    line-height: 20px;
+  }
+  .banner3 {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    gap: 0;
+  }
+  .banner3 .banner-box {
+    padding: 60px;
+    text-align: center;
+  }
+  .banner3 .banner-box h2 {
+    font-size: 20px;
+    padding-bottom: 10px;
+  }
+  .banner3 .banner-box h3 {
+    font-size: 15px;
+  }
+  .footer.section-p1 {
+    padding: 10px 30px;
+  }
 }
