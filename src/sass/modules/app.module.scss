@@ -518,9 +518,18 @@ footer .install img {
 @media (max-width: 799px) {
   @include iPAD;
 }
+
+@media (max-width: 598px){
+  @include Tablet;
+}
+
 @media (max-width: 412px) {
   @include SamsungGalaxy;
 }
 @media (max-width: 319px) {
   @include SmallMobile;
+}
+
+@media (max-width: 343px){
+  @include RealMeC15;
 }

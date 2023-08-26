@@ -127,6 +127,17 @@
     gap: 30px;
   }
 }
+
+@mixin Tablet {
+    .banner3 {
+        flex-direction: column;
+      }
+    
+      .banner .banner-box {
+        padding: 20px;
+      }
+}
+
 @mixin SamsungGalaxy {
   .feature {
     width: 100%;
@@ -209,4 +220,19 @@
   .footer.section-p1 {
     padding: 10px 30px;
   }
+}
+
+
+@mixin RealMeC15 {
+    .news-letter.section-p1 {
+        padding: 20px 20px;
+    }
+
+    footer.section-p1 {
+        padding: 20px;
+    }
+
+    footer .Copyright p {
+        font-size: 12px;
+    }
 }
