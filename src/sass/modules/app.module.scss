@@ -117,7 +117,7 @@ li.active:hover::after {
 }
 .hero {
   display: flex;
-  background-image: url("../../images/hero4.png");
+  background-image: url("../../images/hero4.webp");
   background-size: cover;
   background-position: top 25% right 0;
   height: 90vh;
@@ -131,7 +131,7 @@ li.active:hover::after {
   padding-bottom: 15px;
 }
 .hero button {
-  background-image: url("../../images/button.png");
+  background-image: url("../../images/button.webp");
   background-color: transparent;
   border: 0;
   padding: 14px 80px;
@@ -530,6 +530,6 @@ footer .install img {
   @include SmallMobile;
 }
 
-@media (max-width: 343px){
+@media (max-width: 422px){
   @include RealMeC15;
 }

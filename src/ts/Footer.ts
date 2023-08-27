@@ -6,7 +6,7 @@ export default function Footer(DOM: HTMLDivElement){
     DOM.innerHTML = (`
     <div class='${styles.content}'>
         <div class='${styles.col}'>
-            <img class='${styles.logo}' src='logo.png' alt='cara logo'>
+            <img class='${styles.logo}' src='logo.webp' alt='cara logo'>
             <h4>Contact</h4>
             <p><strong>Address : </strong> 123 Something Road, Di-Makita Street, Walang  Forever Ave, Philippines</p>
             <p><strong>Phone : </strong> (08) 1231 432 / (+63)9 123456769</p>

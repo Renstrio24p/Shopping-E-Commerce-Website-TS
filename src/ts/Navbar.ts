@@ -5,7 +5,7 @@ export default function Navbar(DOM : HTMLDivElement){
 
     DOM.innerHTML = (`
         <div>
-            <img src='logo.png' alt='logo'>
+            <img src='logo.webp' alt='logo'>
         </div>
         <ul id='collapse'>
             <li id='menu' class='${styles.menu}'>${MenuBarXSvg}</li>
