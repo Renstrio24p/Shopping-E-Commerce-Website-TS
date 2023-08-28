@@ -143,7 +143,6 @@
     height: auto;
   }
 
-  .modal-section
 
   .modal-section .modal-content #prodetails {
     flex-direction: column;
@@ -168,7 +167,7 @@
 
 @mixin SamsungGalaxy {
 
-  .section-p1 {
+  .modal-section .section-p1 {
     width: 250px;
     height: 450px;
   }
@@ -220,7 +219,7 @@
 }
 @mixin SmallMobile {
 
-  .section-p1 {
+  .modal-section .section-p1 {
     width: 200px;
     height: 450px;
   }
