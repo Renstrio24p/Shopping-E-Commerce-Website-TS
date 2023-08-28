@@ -2,7 +2,7 @@ import AboutPage from "../pages/about/about";
 import BlogPage from "../pages/blog/blog";
 import ContactPage from "../pages/contact/contact";
 import HomePage from "../pages/home/HomePage";
-import CartPage from "../pages/shopping/Cart";
+import CartPage from "../pages/shopping/components/Cart";
 import ShoppingPage from "../pages/shopping/Shopping";
 import styles from '../sass/modules/app.module.scss';
 

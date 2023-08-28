@@ -1,9 +1,9 @@
 import styles from '../../sass/modules/app.module.scss';
 import Footer from '../../ts/Footer';
 import { ScrollEffect } from '../../ts/functions/ScrollEffect';
-import { Banner3API, BannerSMAPI, FeatureAPI, NewArrivalAPI, ProductAPI } from './components/api';
+import { Banner3API, BannerSMAPI, CombinedAPI, FeatureAPI } from '../../ts/functions/api';
 
-export default function HomePage(DOM: HTMLDivElement){
+export default function HomePage(DOM: HTMLDivElement) {
 
     DOM.innerHTML = (`
          <section class='${styles.hero}'>
@@ -14,6 +14,10 @@ export default function HomePage(DOM: HTMLDivElement){
             <p>Save more with coupons & up to 70% off!</p>
             <button>Shop Now</button>
          </div>
+         </section>
+
+         <section id='productModal' class='${styles['modal-section']}'>
+            <div class='${styles['modal-content']}'></div>
          </section>
          
          <section id='features' class='${styles.feature} ${styles['section-p1']}'>
@@ -60,7 +64,10 @@ export default function HomePage(DOM: HTMLDivElement){
         <footer id='footer' class='${styles['section-p1']} ${styles.footer}'></footer>
     `)
 
+    const Modal = DOM.querySelector('#productModal') as HTMLModElement | null;
     const Foot = document.getElementById('footer') as HTMLDivElement | null;
+
+    if(Modal)Modal.style.display = 'none';
     {Foot && Footer(Foot)}
 
     // Function
@@ -69,8 +76,7 @@ export default function HomePage(DOM: HTMLDivElement){
 
     // API's
     FeatureAPI(DOM);
-    ProductAPI(DOM);
-    NewArrivalAPI(DOM);
+    CombinedAPI(DOM);
     BannerSMAPI(DOM);
     Banner3API(DOM);
 }

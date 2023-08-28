@@ -1,6 +1,9 @@
+
+
 @mixin iPAD {
-  .section-p1 {
+  .modal-content .section-p1 {
     padding: 40px 80px;
+    height: 450px;
   }
   .navbar {
     padding: 10px 30px;
@@ -126,9 +129,34 @@
     justify-content: center;
     gap: 30px;
   }
+  .section-p1 {
+    display: flex;
+    flex-direction: column;
+    overflow-y:visible;
+    overflow-x: hidden;
+    
+
+    height: 700px;
+  }
+  .modal-section .modal-content img {
+    width: 100px;
+    height: auto;
+  }
+
+  .modal-section
+
+  .modal-section .modal-content #prodetails {
+    flex-direction: column;
+  }
 }
 
+
 @mixin Tablet {
+
+  .section-p1 {
+     width: 300px;
+    height: 450px;
+  }
     .banner3 {
         flex-direction: column;
       }
@@ -139,6 +167,12 @@
 }
 
 @mixin SamsungGalaxy {
+
+  .section-p1 {
+    width: 250px;
+    height: 450px;
+  }
+
   .feature {
     width: 100%;
     padding: 0 5px;
@@ -185,6 +219,12 @@
   }
 }
 @mixin SmallMobile {
+
+  .section-p1 {
+    width: 200px;
+    height: 450px;
+  }
+
   .product1 {
     padding: 0 20px;
     text-align: center;
