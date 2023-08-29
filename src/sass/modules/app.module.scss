@@ -771,7 +771,13 @@ footer .install img {
   height: 300px;
   object-fit: cover;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  transition: transform 0.5s ease-in-out;
 }
+
+.blog-img img:hover {
+  transform: scale(1.05);
+}
+
 
 .blog-box .blog-details {
   width: 50%;
