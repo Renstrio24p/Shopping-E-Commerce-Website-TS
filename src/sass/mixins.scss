@@ -1,10 +1,5 @@
-
-
 @mixin iPAD {
-  .modal-content .section-p1 {
-    padding: 40px 80px;
-    height: 450px;
-  }
+ 
   .navbar {
     padding: 10px 30px;
   }
@@ -134,26 +129,23 @@
     flex-direction: column;
     overflow-y:visible;
     overflow-x: hidden;
-    
-
-    height: 700px;
   }
   .modal-section .modal-content img {
-    width: 100px;
+    width: 100%;
     height: auto;
   }
 
-  .modal-section
-
-  .modal-section .modal-content #prodetails {
-    flex-direction: column;
+  .modal-section .modal-content .section-p1 {
+    width: fit-content;
   }
+
+
 }
 
 
 @mixin Tablet {
 
-  .section-p1 {
+  #prodetails.section-p1 {
      width: 300px;
     height: 450px;
   }
@@ -168,9 +160,28 @@
 
 @mixin SamsungGalaxy {
 
-  .section-p1 {
+  .page-header {
+    padding: 30px 10px;
+    height: fit-content;
+  }
+
+  .page-header h2 {
+    font-size: 35px;
+  }
+
+  .modal-section .modal-content .section-p1 {  
     width: 250px;
     height: 450px;
+  }
+
+  .product1.section-p1 {
+    padding: 0;
+  }
+
+  .pagination {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
   }
 
   .feature {
@@ -220,7 +231,7 @@
 }
 @mixin SmallMobile {
 
-  .section-p1 {
+  .modal-section .modal-content .section-p1 {
     width: 200px;
     height: 450px;
   }

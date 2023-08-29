@@ -528,36 +528,7 @@ footer .install img {
   margin: 10px 0 15px;
 }
 
-@media (min-width: 320px) and (max-width:1238px) {
-    .section-p1 {
-      display: flex;
-      flex-direction: column;
-      height: 450px;
-      overflow-y: visible;
-      overflow-x: hidden;
-    }
-}
 
-
-
-@media (max-width: 810px) {
-  @include iPAD;
-}
-
-@media (max-width: 598px) {
-  @include Tablet;
-}
-
-@media (max-width: 412px) {
-  @include SamsungGalaxy;
-}
-@media (max-width: 319px) {
-  @include SmallMobile;
-}
-
-@media (max-width: 422px) {
-  @include RealMeC15;
-}
 
 // Shopping Page
 
@@ -644,7 +615,6 @@ footer .install img {
 
 .modal-content .section-p1 .single-pro-details{
   width: 100%;
- 
 }
 
 .modal-content .section-p1 .small-img-group {
@@ -757,6 +727,37 @@ footer .install img {
 
 .grid-container {
  display: flex;
+}
+
+@media (min-width: 320px) and (max-width:1238px) {
+  .modal-section .modal-content .section-p1 {
+    display: flex;
+    flex-direction: column;
+    height: 450px;
+    overflow-x: hidden;
+    overflow-y: visible;
+  }
+}
+
+
+
+@media (max-width: 810px) {
+@include iPAD;
+}
+
+@media (max-width: 598px) {
+@include Tablet;
+}
+
+@media (max-width: 412px) {
+@include SamsungGalaxy;
+}
+@media (max-width: 319px) {
+@include SmallMobile;
+}
+
+@media (max-width: 422px) {
+@include RealMeC15;
 }
 
 
