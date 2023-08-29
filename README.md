@@ -1,6 +1,8 @@
 
 ## Apparel E Commerce Website using typescript
 
+- API based Database
+- Under Development
 
 ## Pure Vanilla Typescript ECMAScript 10
 
