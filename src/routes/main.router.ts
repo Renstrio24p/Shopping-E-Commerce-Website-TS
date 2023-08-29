@@ -17,7 +17,7 @@ export const MainRoute = (DOM: HTMLDivElement) => {
         Cart = DOM.querySelector('#cart') as HTMLAnchorElement | null,
         Cart2 = DOM.querySelector('#cart2') as HTMLLIElement | null;
 
-    { Route && HomePage(Route as HTMLDivElement) } // HomePage By Default
+    { Route && HomePage(Route as HTMLDivElement) }
 
     const switchRoute = (pageFunction: (Route: HTMLDivElement) => void) => {
         if (Route) {
@@ -36,26 +36,22 @@ export const MainRoute = (DOM: HTMLDivElement) => {
         }
     };
 
+    const menuItems = [Home, Shop, Blog, About, Contact, Cart, Cart2];
 
-    // ES Modular Routing Typescript
-
-    const menuItems = [Home, Shop, Blog, About, Contact,Cart,Cart2];
-
-    menuItems.forEach(item => {
+    menuItems.forEach((item, index) => {
         if (item) {
             item.addEventListener('click', () => {
-                const pages = [HomePage, ShoppingPage, BlogPage, AboutPage, ContactPage,CartPage,CartPage];
-                const activeIndex = menuItems.indexOf(item);
-
-                switchRoute(pages[activeIndex]);
-
+                const pages = [HomePage, ShoppingPage, BlogPage, AboutPage, ContactPage, CartPage, CartPage];
+                switchRoute(pages[index]);
                 menuItems.forEach(menuItem => {
                     if (menuItem) {
                         menuItem.classList.toggle(styles.active, menuItem === item);
                     }
                 });
+                localStorage.setItem('activePage', index.toString());
             });
         }
     });
 
+    
 };

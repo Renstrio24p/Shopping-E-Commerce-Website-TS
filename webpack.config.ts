@@ -1,11 +1,12 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyPlugin = require("copy-webpack-plugin");
+const CopyPlugin = require('copy-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 const path = require('path');
 
 require('ts-node/register');
 
 module.exports = {
-  entry: './src/index.ts', 
+  entry: './src/index.ts',
   mode: 'development',
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -24,7 +25,7 @@ module.exports = {
     liveReload: true,
   },
   resolve: {
-    extensions: ['.js', '.ts', '.tsx', '.json', '.scss']
+    extensions: ['.js', '.ts', '.tsx', '.json', '.scss'],
   },
   module: {
     rules: [
@@ -49,6 +50,10 @@ module.exports = {
         exclude: /\.module\.(sa|sc|c)ss$/,
         use: ['style-loader', 'css-loader', 'sass-loader'],
       },
+      {
+        test: /\.(png|jpe?g|gif|svg|webp)$/i,
+        type: 'asset/resource',
+      },
     ],
   },
   plugins: [
@@ -57,8 +62,11 @@ module.exports = {
     }),
     new CopyPlugin({
       patterns: [
-        { from: "src/images", to: "./" },
+        { from: 'src/images', to: './' },
       ],
     }),
   ],
+  optimization: {
+    minimizer: [new TerserPlugin()],
+  },
 };

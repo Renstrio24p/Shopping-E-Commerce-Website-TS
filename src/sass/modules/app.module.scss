@@ -738,6 +738,8 @@ footer .install img {
  display: flex;
 }
 
+// Blog Page
+
 .blog-header {
   background-image: url("../../images/banner/b19.jpg");
   background-size: cover;
@@ -825,6 +827,11 @@ footer .install img {
   z-index: -1;
 }
 
+// About Page
+
+.page-header.about-header {
+  background-image: url('../../images/about/About.webp');
+}
 
 
 @media (min-width: 320px) and (max-width:1238px) {
