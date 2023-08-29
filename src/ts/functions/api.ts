@@ -1,6 +1,7 @@
 import styles from '../../sass/modules/app.module.scss';
 import { CartSvg, MenuBarXSvg, StarSvg } from '../svg';
 import { BannerData, BannerSMData, CombinedData, featuresData } from './data';
+import { BlogData } from './data2';
 
 export const FeatureAPI = (DOM: HTMLDivElement) => {
 
@@ -203,3 +204,24 @@ export const Banner3API = (DOM: HTMLDivElement) => {
     })
 }
 
+export const BlogAPI = (DOM: HTMLDivElement) => {
+    const BlogSection = DOM.querySelector(`.${styles['blog-section']}`) as HTMLDivElement | null;
+
+    BlogData.forEach(Blog => {
+        const BlogDiv = document.createElement('div');
+        BlogDiv.classList.add(styles['blog-box']);
+        BlogDiv.innerHTML = `
+            <div class='${styles['blog-img']}'>
+                <img src='${Blog.imgSrc}' alt='${Blog.alt}'>
+            </div>
+            <div>
+                <h4>${Blog.head}</h4>
+                <p>${Blog.text}</p>
+                <a href='#'>Continue Reading</a>
+            </div>
+            <h1>${Blog.date}</h1>
+        `; 
+
+        BlogSection?.appendChild(BlogDiv);
+    });
+}

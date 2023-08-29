@@ -139,6 +139,32 @@
     width: fit-content;
   }
 
+  .blog-section {
+    padding: 100px 20px 0 30px;
+  }
+
+  .blog-box {
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+    position: relative;
+    padding-bottom: 90px;
+  }
+
+  .blog-box img {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .blog-box .blog-img {
+    width: 100%;
+  }
+
+  .pagination {
+    display: flex;
+    gap: 10px;
+    padding: 30px;
+  }
 
 }
 
@@ -176,12 +202,6 @@
 
   .product1.section-p1 {
     padding: 0;
-  }
-
-  .pagination {
-    display: flex;
-    gap: 10px;
-    padding: 10px;
   }
 
   .feature {
