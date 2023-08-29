@@ -53,5 +53,20 @@ export const MainRoute = (DOM: HTMLDivElement) => {
         }
     });
 
-    
+    const storedActivePage = localStorage.getItem('activePage');
+    if (storedActivePage) {
+        const activeIndex = parseInt(storedActivePage);
+        const pages = [HomePage, ShoppingPage, BlogPage, AboutPage, ContactPage, CartPage, CartPage];
+        switchRoute(pages[activeIndex]);
+        menuItems.forEach((menuItem, index) => {
+            if (menuItem) {
+                menuItem.classList.toggle(styles.active, index === activeIndex);
+            }
+        });
+    } else {
+        switchRoute(HomePage);
+        if (Home) {
+            Home.classList.toggle(styles.active, true);
+        }
+    }
 };
