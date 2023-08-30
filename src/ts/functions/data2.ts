@@ -71,3 +71,30 @@ export const BlogData = [
         date:'19/01',
     },
 ]
+
+export const PeoplesData = [
+    {
+        imgSrc: 'people/1.png',
+        name: 'John Doe',
+        profession:'Senior Marketing Manager',
+        phone: '+ 000 123 000 77 88',
+        email: 'JohnDoeSM@example.com',
+        alt: 'image of John',
+    },
+    {
+        imgSrc: 'people/2.png',
+        name: 'Willam Smith',
+        profession:'Senior Marketing Manager',
+        phone: '+ 000 123 000 77 88',
+        email: 'SmithWillamsSM@example.com',
+        alt: 'image of Willam',
+    },
+    {
+        imgSrc: 'people/3.png',
+        name: 'Emma Stone',
+        profession:'Senior Marketing Manager',
+        phone: '+ 000 123 000 77 88',
+        email: 'EmmaStoneSM@example.com',
+        alt: 'image of Emma',
+    },
+]

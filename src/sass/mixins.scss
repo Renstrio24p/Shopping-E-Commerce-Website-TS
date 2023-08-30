@@ -166,6 +166,69 @@
     padding: 30px;
   }
 
+  .section-p1.about-head img {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .section-p1.about-head .div {
+    width: 100%;
+  }
+
+  .section-p1.about-head {
+    padding: 0;
+    text-align: center;
+  }
+
+  .section-p1.about-head p,
+  .section-p1.about-head abbr {
+    text-align: left;
+  }
+
+  .section-p1.about-head h1 {
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .about-app.section-p1 h1 {
+    font-size: 30px;
+  }
+
+  .about-app.section-p1 .video  {
+    width: 100%;
+  }
+
+  .contact-details.section-p1 {
+    width: 100%;
+    padding: 30px;
+  }
+
+  .contact-details.section-p1 .map {
+    width: 100%;
+    height: 230px;
+  }
+
+
+  
+  .map frame {
+    width: 100%;
+  }
+
+  .form-details.section-p1 {
+    justify-content: center;
+    padding: 10px;
+  }
+
+  .form-details.section-p1 form {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .people {
+    justify-content: left;
+    width: 100%;
+    padding: 5px 20px;
+  }
 }
 
 @mixin Tablet {
@@ -239,6 +302,28 @@
   .banner3 .banner-box h3 {
     font-size: 10px;
   }
+
+  
+  .contact-details.section-p1 p {
+     line-height: 25px;
+  }
+
+  .form-details.section-p1 {
+    padding: 5px;
+  }
+
+  .form-details.section-p1 form {
+    padding: 5px;
+  }
+
+  .people {
+    padding: 5px;
+  }
+
+  .people .box {
+    flex-direction: column;
+  }
+
   .footer .content .col {
     display: flex;
     justify-content: left;

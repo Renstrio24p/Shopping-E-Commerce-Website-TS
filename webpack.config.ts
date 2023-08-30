@@ -54,6 +54,14 @@ module.exports = {
         test: /\.(png|jpe?g|gif|svg|webp)$/i,
         type: 'asset/resource',
       },
+      // Rule for MP4 files
+      {
+        test: /\.mp4$/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'videos/[name][ext]',
+        },
+      },
     ],
   },
   plugins: [
@@ -63,6 +71,7 @@ module.exports = {
     new CopyPlugin({
       patterns: [
         { from: 'src/images', to: './' },
+        { from: 'src/images/videos', to: './' },
       ],
     }),
   ],

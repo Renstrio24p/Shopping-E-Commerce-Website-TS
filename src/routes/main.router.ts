@@ -17,7 +17,6 @@ export const MainRoute = (DOM: HTMLDivElement) => {
         Cart = DOM.querySelector('#cart') as HTMLAnchorElement | null,
         Cart2 = DOM.querySelector('#cart2') as HTMLLIElement | null;
 
-    { Route && HomePage(Route as HTMLDivElement) }
 
     const switchRoute = (pageFunction: (Route: HTMLDivElement) => void) => {
         if (Route) {

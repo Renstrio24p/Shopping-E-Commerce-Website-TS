@@ -1,7 +1,7 @@
 import styles from '../../sass/modules/app.module.scss';
 import { CartSvg, MenuBarXSvg, StarSvg } from '../svg';
 import { BannerData, BannerSMData, CombinedData, featuresData } from './data';
-import { BlogData } from './data2';
+import { BlogData, PeoplesData } from './data2';
 
 export const FeatureAPI = (DOM: HTMLDivElement) => {
 
@@ -153,8 +153,6 @@ export const CombinedAPI = (DOM: HTMLDivElement) => {
 
 };
 
-
-
 export const BannerSMAPI = (DOM: HTMLDivElement) => {
     const SMBanner = DOM.querySelector('#sm-banner') as HTMLDivElement | null;
 
@@ -221,7 +219,27 @@ export const BlogAPI = (DOM: HTMLDivElement) => {
             </div>
             <h1>${Blog.date}</h1>
         `; 
-
         BlogSection?.appendChild(BlogDiv);
     });
+}
+
+export const PoepleAPI = (DOM: HTMLDivElement) => {
+
+    const PeopleDiv = DOM.querySelector(`.${styles.people}`) as HTMLDivElement | null;
+
+    if(PeopleDiv){
+        PeoplesData.forEach(People => {
+            const BoxDiv = document.createElement('div');
+            BoxDiv.classList.add(styles.box);
+            BoxDiv.innerHTML = `
+                <img src='${People.imgSrc}' alt='${People.alt}'>
+                <p><span>${People.name} </span> ${People.profession} <br>
+                Phone: ${People.phone} <br>
+                Email: ${People.email} </p> 
+            `
+            PeopleDiv.appendChild(BoxDiv);
+        })
+
+    }
+
 }
